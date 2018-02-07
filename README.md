@@ -1,1 +1,1 @@
-# camiuras-released
+python -m http.server

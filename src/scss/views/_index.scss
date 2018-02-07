@@ -1,0 +1,131 @@
+@import "compass";
+
+.m-section--full {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+
+.l-section {
+  //First section
+  &__welcome {
+  }
+  &__menu {
+    &--container {
+    }
+  }
+}
+
+.b-section {
+  //Section menu
+  &__menu {
+    &--nav {
+      position: absolute;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    &--about {
+      top: 40px;
+    }
+    &--works {
+      bottom: 40px;
+    }
+  }
+  //NAVBAR
+  &__nav {
+    position: absolute;
+    top: 40px;
+    &--center {
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    &--left {
+      left: 40px;
+    }
+    &--right {
+      right: 40px;
+    }
+  }
+  //CENTRAL
+  &__central {
+    &--content {
+      position: absolute;
+      top: 65%;
+      left: 40px;
+      right: 40px;
+      @include transform(translateY(-65%));
+    }
+    &--wrap {
+      display: flex;
+    }
+    &--left {
+      img {
+        display: block;
+      }
+      span {
+        display: block;
+        line-height: 20px;
+      }
+      .text--red {
+        font-size: 14px;
+      }
+      .text__lighter--orange {
+        font-size: 12px;
+      }
+    }
+    &--contact {
+      padding-top: 20px;
+    }
+    &--right {
+      padding: 0 80px;
+      .text--orange {
+        font-size: 20vh;
+      }
+    }
+    &--title {
+      padding-bottom: 30px;
+    }
+    &--more {
+      float: left;
+      width: 100%;
+      padding-top: 40px;
+    }
+  }
+  &__works {
+    &--sidenav {
+      position: absolute;
+      right: -30px;
+      top: 60%;
+      @include transform(translateY(-60%) rotate(90deg));
+      .c-sidenav--item {
+        float: left;
+        &:nth-child(1){
+          position: relative;
+          right: 60px;
+        }
+        span {
+          font-size: 12px;
+          letter-spacing: 4px;
+          @include transition(.2s ease-in-out);
+          &:hover {
+            color: $blue;
+          }
+          &.is--active {
+            color: $blue;
+            font-weight: 700;
+            font-style: italic;
+            &:after {
+              content: "";
+              width: 50%;
+              margin: 0 auto;
+              height: 5px;
+              display: block;
+              background: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
