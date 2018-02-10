@@ -36,6 +36,10 @@
   &__nav {
     position: absolute;
     top: 40px;
+    span {
+      font-weight: 600;
+      font-size: 13px;
+    }
     &--center {
       left: 50%;
       @include transform(translateX(-50%));
@@ -106,15 +110,13 @@
         }
         span {
           font-size: 12px;
-          letter-spacing: 4px;
+          font-weight: 700;
           @include transition(.2s ease-in-out);
           &:hover {
             color: $blue;
           }
           &.is--active {
             color: $blue;
-            font-weight: 700;
-            font-style: italic;
             &:after {
               content: "";
               width: 50%;

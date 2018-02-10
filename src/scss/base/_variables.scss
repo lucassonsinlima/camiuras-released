@@ -1,7 +1,9 @@
-$font-path-univers: "fonts/univers" !default;
+$font-path-univers: "../../../src/fonts/univers" !default;
+// $font-path-univers: "./src/fonts/univers" !default;
 //Fonts
 $fontMain: "Univers", sans-serif;
-
+$fontLight: "Univers-Light", sans-serif;
+$fontBlackExtObl: "Univers-BlackExtObl", sans-serif;
 //Colors
 $orange: #ff7441;
 $red: #ff0000;

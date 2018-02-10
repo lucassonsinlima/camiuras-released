@@ -156,23 +156,22 @@ body {
 .text {
   text-transform: lowercase;
   font-family: "Univers", sans-serif;
+  display: inline-block;
 }
-/* line 4, ../../src/scss/base/_text.scss */
+/* line 5, ../../src/scss/base/_text.scss */
 .text--orange {
-  font-style: italic;
-  font-weight: 900;
   color: #ff7441;
+  font-weight: 900;
 }
 @media (min-width: 921px) {
-  /* line 4, ../../src/scss/base/_text.scss */
+  /* line 5, ../../src/scss/base/_text.scss */
   .text--orange {
     font-size: 30vh;
   }
 }
 /* line 12, ../../src/scss/base/_text.scss */
 .text--red {
-  font-style: italic;
-  font-weight: 900;
+  font-weight: 700;
   color: #ff0000;
   -webkit-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -180,33 +179,34 @@ body {
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-/* line 17, ../../src/scss/base/_text.scss */
+/* line 16, ../../src/scss/base/_text.scss */
 .text--red:hover {
   color: #990000;
 }
-/* line 21, ../../src/scss/base/_text.scss */
+/* line 20, ../../src/scss/base/_text.scss */
 .text--blue {
   color: #0000ff;
-  font-weight: 900;
-  font-style: italic;
+  font-weight: 700;
   font-size: 10vh;
 }
-/* line 27, ../../src/scss/base/_text.scss */
+/* line 25, ../../src/scss/base/_text.scss */
 .text--gray {
   font-size: 12px;
   letter-spacing: 4px;
   color: #454545;
 }
-/* line 32, ../../src/scss/base/_text.scss */
+/* line 30, ../../src/scss/base/_text.scss */
 .text--graylight {
   color: #bebebe;
   line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 /* line 36, ../../src/scss/base/_text.scss */
 .text__lighter {
   position: relative;
   font-size: 12px;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
 }
 /* line 40, ../../src/scss/base/_text.scss */
 .text__lighter--orange {
@@ -266,30 +266,58 @@ body {
 
 @font-face {
   font-family: 'Univers';
-  src: url("fonts/univers/Univers.eot");
-  src: url("fonts/univers/Univers.eot?#iefix") format("embedded-opentype"), url("fonts/univers/Univers.woff2") format("woff2"), url("fonts/univers/Univers.woff") format("woff"), url("fonts/univers/Univers.svg#Univers") format("svg");
+  src: url("../../../src/fonts/univers/Univers.eot");
+  src: url("../../../src/fonts/univers/Univers.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers.woff2") format("woff2"), url("../../../src/fonts/univers/Univers.woff") format("woff"), url("../../../src/fonts/univers/Univers.svg#Univers") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Univers';
-  src: url("fonts/univers/Univers-BlackExtObl.eot");
-  src: url("fonts/univers/Univers-BlackExtObl.eot?#iefix") format("embedded-opentype"), url("fonts/univers/Univers-BlackExtObl.woff2") format("woff2"), url("fonts/univers/Univers-BlackExtObl.woff") format("woff"), url("fonts/univers/Univers-BlackExtObl.svg#Univers-BlackExtObl") format("svg");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Univers';
-  src: url("fonts/univers/Univers-CondensedLight.eot");
-  src: url("fonts/univers/Univers-CondensedLight.eot?#iefix") format("embedded-opentype"), url("fonts/univers/Univers-CondensedLight.woff2") format("woff2"), url("fonts/univers/Univers-CondensedLight.woff") format("woff"), url("fonts/univers/Univers-CondensedLight.svg#/Univers-CondensedLight") format("svg");
+  src: url("../../../src/fonts/univers/Univers-Light.eot");
+  src: url("../../../src/fonts/univers/Univers-Light.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-Light.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-Light.woff") format("woff"), url("../../../src/fonts/univers/Univers-Light.svg#/Univers-Light") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Univers';
-  src: url("fonts/univers/Univers-CondensedOblique.eot");
-  src: url("fonts/univers/Univers-CondensedOblique.eot?#iefix") format("embedded-opentype"), url("fonts/univers/Univers-CondensedOblique.woff2") format("woff2"), url("fonts/univers/Univers-CondensedOblique.woff") format("woff"), url("fonts/univers/Univers-CondensedOblique.svg#/Univers-CondensedLight") format("svg");
+  src: url("../../../src/fonts/univers/Univers-LightOblique.eot");
+  src: url("../../../src/fonts/univers/Univers-LightOblique.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-LightOblique.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-LightOblique.woff") format("woff"), url("../../../src/fonts/univers/Univers-LightOblique.svg#/Univers-LightOblique") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Univers';
+  src: url("../../../src/fonts/univers/Univers-CondensedOblique.eot");
+  src: url("../../../src/fonts/univers/Univers-CondensedOblique.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-CondensedOblique.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-CondensedOblique.woff") format("woff"), url("../../../src/fonts/univers/Univers-CondensedOblique.svg#/Univers-CondensedOblique") format("svg");
   font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univers';
+  src: url("../../../src/fonts/univers/Univers-Black.eot");
+  src: url("../../../src/fonts/univers/Univers-Black.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-Black.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-Black.woff") format("woff"), url("../../../src/fonts/univers/Univers-Black.svg#Univers-Black") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univers';
+  src: url("../../../src/fonts/univers/Univers-BlackExtObl.eot");
+  src: url("../../../src/fonts/univers/Univers-BlackExtObl.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-BlackExtObl.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-BlackExtObl.woff") format("woff"), url("../../../src/fonts/univers/Univers-BlackExtObl.svg#/Univers-BlackExtObl") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univers-CondensedLight';
+  src: url("../../../src/fonts/univers/Univers-CondensedLight.eot");
+  src: url("../../../src/fonts/univers/Univers-CondensedLight.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-CondensedLight.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-CondensedLight.woff") format("woff"), url("../../../src/fonts/univers/Univers-CondensedLight.svg#/Univers-CondensedLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univers-CondensedLightOblique';
+  src: url("../../../src/fonts/univers/Univers-CondensedLightOblique.eot");
+  src: url("../../../src/fonts/univers/Univers-CondensedLightOblique.eot?#iefix") format("embedded-opentype"), url("../../../src/fonts/univers/Univers-CondensedLightOblique.woff2") format("woff2"), url("../../../src/fonts/univers/Univers-CondensedLightOblique.woff") format("woff"), url("../../../src/fonts/univers/Univers-CondensedLightOblique.svg#/Univers-CondensedLightOblique") format("svg");
+  font-weight: normal;
   font-style: normal;
 }
 /* line 1, ../../src/scss/states/modifiers.scss */
@@ -340,6 +368,13 @@ body {
 /* line 54, ../../src/scss/states/modifiers.scss */
 .pull--right {
   float: right;
+}
+
+/* line 59, ../../src/scss/states/modifiers.scss */
+.skew-x {
+  -ms-transform: skewX(-15deg);
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
 }
 
 /* line 3, ../../src/scss/components/_techbox.scss */
@@ -409,6 +444,11 @@ body {
   top: 40px;
 }
 /* line 39, ../../src/scss/views/_index.scss */
+.b-section__nav span {
+  font-weight: 600;
+  font-size: 13px;
+}
+/* line 43, ../../src/scss/views/_index.scss */
 .b-section__nav--center {
   left: 50%;
   -moz-transform: translateX(-50%);
@@ -416,15 +456,15 @@ body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 43, ../../src/scss/views/_index.scss */
+/* line 47, ../../src/scss/views/_index.scss */
 .b-section__nav--left {
   left: 40px;
 }
-/* line 46, ../../src/scss/views/_index.scss */
+/* line 50, ../../src/scss/views/_index.scss */
 .b-section__nav--right {
   right: 40px;
 }
-/* line 52, ../../src/scss/views/_index.scss */
+/* line 56, ../../src/scss/views/_index.scss */
 .b-section__central--content {
   position: absolute;
   top: 65%;
@@ -435,50 +475,50 @@ body {
   -webkit-transform: translateY(-65%);
   transform: translateY(-65%);
 }
-/* line 59, ../../src/scss/views/_index.scss */
+/* line 63, ../../src/scss/views/_index.scss */
 .b-section__central--wrap {
   display: flex;
 }
-/* line 63, ../../src/scss/views/_index.scss */
+/* line 67, ../../src/scss/views/_index.scss */
 .b-section__central--left img {
   display: block;
 }
-/* line 66, ../../src/scss/views/_index.scss */
+/* line 70, ../../src/scss/views/_index.scss */
 .b-section__central--left span {
   display: block;
   line-height: 20px;
 }
-/* line 70, ../../src/scss/views/_index.scss */
+/* line 74, ../../src/scss/views/_index.scss */
 .b-section__central--left .text--red {
   font-size: 14px;
 }
-/* line 73, ../../src/scss/views/_index.scss */
+/* line 77, ../../src/scss/views/_index.scss */
 .b-section__central--left .text__lighter--orange {
   font-size: 12px;
 }
-/* line 77, ../../src/scss/views/_index.scss */
+/* line 81, ../../src/scss/views/_index.scss */
 .b-section__central--contact {
   padding-top: 20px;
 }
-/* line 80, ../../src/scss/views/_index.scss */
+/* line 84, ../../src/scss/views/_index.scss */
 .b-section__central--right {
   padding: 0 80px;
 }
-/* line 82, ../../src/scss/views/_index.scss */
+/* line 86, ../../src/scss/views/_index.scss */
 .b-section__central--right .text--orange {
   font-size: 20vh;
 }
-/* line 86, ../../src/scss/views/_index.scss */
+/* line 90, ../../src/scss/views/_index.scss */
 .b-section__central--title {
   padding-bottom: 30px;
 }
-/* line 89, ../../src/scss/views/_index.scss */
+/* line 93, ../../src/scss/views/_index.scss */
 .b-section__central--more {
   float: left;
   width: 100%;
   padding-top: 40px;
 }
-/* line 96, ../../src/scss/views/_index.scss */
+/* line 100, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav {
   position: absolute;
   right: -30px;
@@ -488,35 +528,33 @@ body {
   -webkit-transform: translateY(-60%) rotate(90deg);
   transform: translateY(-60%) rotate(90deg);
 }
-/* line 101, ../../src/scss/views/_index.scss */
+/* line 105, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item {
   float: left;
 }
-/* line 103, ../../src/scss/views/_index.scss */
+/* line 107, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item:nth-child(1) {
   position: relative;
   right: 60px;
 }
-/* line 107, ../../src/scss/views/_index.scss */
+/* line 111, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span {
   font-size: 12px;
-  letter-spacing: 4px;
+  font-weight: 700;
   -moz-transition: ease-in-out 0.2s;
   -o-transition: ease-in-out 0.2s;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
 }
-/* line 111, ../../src/scss/views/_index.scss */
+/* line 115, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span:hover {
   color: #0000ff;
 }
-/* line 114, ../../src/scss/views/_index.scss */
+/* line 118, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span.is--active {
   color: #0000ff;
-  font-weight: 700;
-  font-style: italic;
 }
-/* line 118, ../../src/scss/views/_index.scss */
+/* line 120, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span.is--active:after {
   content: "";
   width: 50%;

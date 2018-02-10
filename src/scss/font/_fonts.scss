@@ -10,25 +10,25 @@
 }
 
 @font-face {
-  font-family: 'Univers';
-  src: url('#{$font-path-univers}/Univers-BlackExtObl.eot');
-  src: url('#{$font-path-univers}/Univers-BlackExtObl.eot?#iefix') format('embedded-opentype'),
-  url('#{$font-path-univers}/Univers-BlackExtObl.woff2') format('woff2'),
-  url('#{$font-path-univers}/Univers-BlackExtObl.woff') format('woff'),
-  url('#{$font-path-univers}/Univers-BlackExtObl.svg#Univers-BlackExtObl') format('svg');
-  font-weight: 900;
-  font-style: normal;
+	font-family: 'Univers';
+	src: url('#{$font-path-univers}/Univers-Light.eot');
+	src: url('#{$font-path-univers}/Univers-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path-univers}/Univers-Light.woff2') format('woff2'),
+		url('#{$font-path-univers}/Univers-Light.woff') format('woff'),
+		url('#{$font-path-univers}/Univers-Light.svg#/Univers-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Univers';
-	src: url('#{$font-path-univers}/Univers-CondensedLight.eot');
-	src: url('#{$font-path-univers}/Univers-CondensedLight.eot?#iefix') format('embedded-opentype'),
-		url('#{$font-path-univers}/Univers-CondensedLight.woff2') format('woff2'),
-		url('#{$font-path-univers}/Univers-CondensedLight.woff') format('woff'),
-		url('#{$font-path-univers}/Univers-CondensedLight.svg#/Univers-CondensedLight') format('svg');
+	src: url('#{$font-path-univers}/Univers-LightOblique.eot');
+	src: url('#{$font-path-univers}/Univers-LightOblique.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path-univers}/Univers-LightOblique.woff2') format('woff2'),
+		url('#{$font-path-univers}/Univers-LightOblique.woff') format('woff'),
+		url('#{$font-path-univers}/Univers-LightOblique.svg#/Univers-LightOblique') format('svg');
 	font-weight: 300;
-	font-style: normal;
+	font-style: italic;
 }
 
 @font-face {
@@ -37,7 +37,51 @@
 	src: url('#{$font-path-univers}/Univers-CondensedOblique.eot?#iefix') format('embedded-opentype'),
 		url('#{$font-path-univers}/Univers-CondensedOblique.woff2') format('woff2'),
 		url('#{$font-path-univers}/Univers-CondensedOblique.woff') format('woff'),
-		url('#{$font-path-univers}/Univers-CondensedOblique.svg#/Univers-CondensedLight') format('svg');
+		url('#{$font-path-univers}/Univers-CondensedOblique.svg#/Univers-CondensedOblique') format('svg');
 	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Univers';
+  src: url('#{$font-path-univers}/Univers-Black.eot');
+  src: url('#{$font-path-univers}/Univers-Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path-univers}/Univers-Black.woff2') format('woff2'),
+  url('#{$font-path-univers}/Univers-Black.woff') format('woff'),
+  url('#{$font-path-univers}/Univers-Black.svg#Univers-Black') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Univers';
+	src: url('#{$font-path-univers}/Univers-BlackExtObl.eot');
+	src: url('#{$font-path-univers}/Univers-BlackExtObl.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path-univers}/Univers-BlackExtObl.woff2') format('woff2'),
+		url('#{$font-path-univers}/Univers-BlackExtObl.woff') format('woff'),
+		url('#{$font-path-univers}/Univers-BlackExtObl.svg#/Univers-BlackExtObl') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Univers-CondensedLight';
+	src: url('#{$font-path-univers}/Univers-CondensedLight.eot');
+	src: url('#{$font-path-univers}/Univers-CondensedLight.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path-univers}/Univers-CondensedLight.woff2') format('woff2'),
+		url('#{$font-path-univers}/Univers-CondensedLight.woff') format('woff'),
+		url('#{$font-path-univers}/Univers-CondensedLight.svg#/Univers-CondensedLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Univers-CondensedLightOblique';
+	src: url('#{$font-path-univers}/Univers-CondensedLightOblique.eot');
+	src: url('#{$font-path-univers}/Univers-CondensedLightOblique.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path-univers}/Univers-CondensedLightOblique.woff2') format('woff2'),
+		url('#{$font-path-univers}/Univers-CondensedLightOblique.woff') format('woff'),
+		url('#{$font-path-univers}/Univers-CondensedLightOblique.svg#/Univers-CondensedLightOblique') format('svg');
+	font-weight: normal;
 	font-style: normal;
 }
