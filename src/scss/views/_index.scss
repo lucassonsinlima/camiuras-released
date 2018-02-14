@@ -129,5 +129,16 @@
         }
       }
     }
+    &--group {
+      > nav {
+        float: left;
+        width: 50%;
+      }
+    }
   }
+}
+
+.slick-slider {
+  float: left;
+  width: 50%;
 }

@@ -563,3 +563,14 @@ body {
   display: block;
   background: #0000ff;
 }
+/* line 133, ../../src/scss/views/_index.scss */
+.b-section__works--group > nav {
+  float: left;
+  width: 50%;
+}
+
+/* line 141, ../../src/scss/views/_index.scss */
+.slick-slider {
+  float: left;
+  width: 50%;
+}
