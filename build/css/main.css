@@ -414,6 +414,42 @@ body {
   border-bottom: 0;
 }
 
+/* line 1, ../../src/scss/components/_carousel.scss */
+.slick-arrow {
+  color: #ff7441;
+  text-transform: lowercase;
+  font-size: 18px;
+  border: 0;
+  background: 0;
+  position: absolute;
+  bottom: -100px;
+  outline: none;
+  font-weight: 700;
+  -ms-transform: skewX(-15deg);
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  cursor: pointer;
+}
+
+/* line 17, ../../src/scss/components/_carousel.scss */
+.slick-next {
+  right: 20px;
+}
+
+/* line 20, ../../src/scss/components/_carousel.scss */
+.slick-prev {
+  left: 20px;
+}
+
+/* line 24, ../../src/scss/components/_carousel.scss */
+.slick-slide {
+  outline: none;
+}
+/* line 26, ../../src/scss/components/_carousel.scss */
+.slick-slide img {
+  display: inline-block;
+}
+
 /* line 3, ../../src/scss/views/_index.scss */
 .m-section--full {
   height: 100vh;
@@ -563,13 +599,59 @@ body {
   display: block;
   background: #0000ff;
 }
-/* line 133, ../../src/scss/views/_index.scss */
+/* line 132, ../../src/scss/views/_index.scss */
+.b-section__works--wrap {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 139, ../../src/scss/views/_index.scss */
+.b-section__works--group {
+  display: flex;
+  align-items: center;
+}
+/* line 142, ../../src/scss/views/_index.scss */
 .b-section__works--group > nav {
   float: left;
-  width: 50%;
+  text-align: center;
+}
+/* line 146, ../../src/scss/views/_index.scss */
+.b-section__works--group .b-section__works--images {
+  width: 40%;
+}
+/* line 149, ../../src/scss/views/_index.scss */
+.b-section__works--group .b-section__works--info {
+  width: 60%;
+}
+/* line 152, ../../src/scss/views/_index.scss */
+.b-section__works--group .works__item {
+  text-align: center;
+  position: relative;
+}
+/* line 155, ../../src/scss/views/_index.scss */
+.b-section__works--group .works__item--title {
+  margin-bottom: 30px;
+  text-align: left;
+}
+/* line 158, ../../src/scss/views/_index.scss */
+.b-section__works--group .works__item--title span {
+  color: #ff7441;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: 700;
+  font-size: 30px;
+}
+/* line 166, ../../src/scss/views/_index.scss */
+.b-section__works--group .works__item--content {
+  text-align: left;
 }
 
-/* line 141, ../../src/scss/views/_index.scss */
+/* line 174, ../../src/scss/views/_index.scss */
 .slick-slider {
   float: left;
   width: 50%;

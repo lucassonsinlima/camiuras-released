@@ -129,10 +129,43 @@
         }
       }
     }
+    &--wrap {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+    }
     &--group {
+      display: flex;
+      align-items: center;  
       > nav {
         float: left;
-        width: 50%;
+        text-align: center;
+      }
+      .b-section__works--images {
+        width: 40%;
+      }
+      .b-section__works--info {
+        width: 60%;
+      }
+      .works__item  {
+        text-align: center;
+        position: relative;
+        &--title {
+          margin-bottom: 30px;
+          text-align: left;
+          span {
+            color: $orange;
+            font-size: 18px;
+            text-transform: lowercase;
+            font-weight: 700;
+            font-size: 30px;
+          }
+        }
+        &--content {
+          text-align: left;
+        }
       }
     }
   }
