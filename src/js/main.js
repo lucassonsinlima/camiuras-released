@@ -1,5 +1,4 @@
 var carousel = (function(){
-  console.log("loles");
   $('.slider-for').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
@@ -16,6 +15,22 @@ var carousel = (function(){
   });
 })
 
+var nav_handler = (function(){
+  var nav_item = $('[data-go]');
+  var container = $('[data-content]');
+
+  nav_item.on("click", function(){
+    if(!$(this).hasClass("is--active")){
+      nav_item.removeClass("is--active");
+      $(this).addClass('is--active');
+      var curr_value = $(this).attr("data-go");
+      $('[data-content]').removeClass("is--active");
+      $('[data-content='+curr_value+']').addClass("is--active");
+    }
+  })
+})
+
 $(document).ready(function() {
     carousel();
+    nav_handler();
 });
