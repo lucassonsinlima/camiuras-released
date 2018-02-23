@@ -155,6 +155,7 @@ body {
 /* line 10, ../../src/scss/base/_global.scss */
 .container {
   max-width: 1270px;
+  margin: 0 auto;
 }
 
 /* line 1, ../../src/scss/base/_text.scss */
