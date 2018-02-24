@@ -12,6 +12,7 @@
   &--red {
     font-weight: 700;
     color: $red;
+    cursor: pointer;
     @include transition(.2s ease-in-out);
     &:hover {
       color: darken($red, 20%);

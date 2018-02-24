@@ -2,12 +2,43 @@ html {
   font-family: $fontMain;
 }
 body {
-  background: #fff;
-  // overflow: hidden;
-  position: relative;
+  overflow: hidden;
 }
 
 .container {
   max-width: 1270px;
   margin: 0 auto;
+}
+
+.section {
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  display: table;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.l-section{
+  &__welcome{
+    z-index: 5;
+  }
+  &__menu{
+    z-index: 4;
+  }
+  &__central{
+    z-index: 3;
+  }
+  &__tech{
+    z-index: 2;
+  }
+  &__works{
+    z-index: 1;
+  }
 }

@@ -1,7 +1,7 @@
 @import "compass";
 
 .m-section--full {
-  background: #fff;
+  text-align: center;
 }
 
 .l-section {
@@ -80,8 +80,10 @@
     }
     &--contact {
       padding-top: 20px;
+      text-align: left;
     }
     &--right {
+      text-align: left;
       padding: 0 80px;
       .text--orange {
         font-size: 8em;
@@ -162,7 +164,7 @@
         width: 40%;
       }
       .b-section__works--info {
-        width: 60%;
+        width: 50%;
       }
       .works__item  {
         text-align: center;

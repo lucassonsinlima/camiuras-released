@@ -36,8 +36,8 @@ var piling = (function(){
     direction: 'horizontal',
     verticalCentered: true,
     sectionsColor: ["#fff","#fff","#fff","#fff","#fff"],
-    anchors: false,
-    scrollingSpeed: 500,
+    anchors: ['home', 'home2', 'about', 'tech', 'works'],
+    scrollingSpeed: 400,
     easing: 'swing',
     loopBottom: false,
     loopTop: false,
@@ -48,13 +48,13 @@ var piling = (function(){
     touchSensitivity: 5,
     keyboardScrolling: true,
     sectionSelector: '.section',
-    animateAnchor: false,
+    animateAnchor: true,
 
-    //events
     onLeave: function(index, nextIndex, direction){},
     afterLoad: function(anchorLink, index){},
     afterRender: function(){}
   });
+
 })
 
 $(document).ready(function() {

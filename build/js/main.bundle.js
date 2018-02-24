@@ -38,8 +38,8 @@ var piling = function piling() {
     direction: 'horizontal',
     verticalCentered: true,
     sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff"],
-    anchors: false,
-    scrollingSpeed: 500,
+    anchors: ['home', 'home2', 'about', 'tech', 'works'],
+    scrollingSpeed: 400,
     easing: 'swing',
     loopBottom: false,
     loopTop: false,
@@ -50,9 +50,8 @@ var piling = function piling() {
     touchSensitivity: 5,
     keyboardScrolling: true,
     sectionSelector: '.section',
-    animateAnchor: false,
+    animateAnchor: true,
 
-    //events
     onLeave: function onLeave(index, nextIndex, direction) {},
     afterLoad: function afterLoad(anchorLink, index) {},
     afterRender: function afterRender() {}

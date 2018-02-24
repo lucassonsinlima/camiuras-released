@@ -1,11 +1,17 @@
+.c-tech {
+  text-align: center;
+  width: 775px;
+  margin: 0 auto;
+}
 .c-tech__infos {
   &--title {
+    text-align: left;
     span {
       display: block;
     }
   }
   .c-tech__box {
-    width: 775px;
+    width: 100%;
     margin-top: 50px;
     padding: 0;
     border: 1px solid $gray;
