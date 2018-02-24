@@ -608,34 +608,86 @@ body {
   font-size: .7em;
 }
 /* line 91, ../../src/scss/views/_index.scss */
+.b-section__central--image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+/* line 95, ../../src/scss/views/_index.scss */
+.b-section__central--image img {
+  -moz-transition: ease-in-out 0.2s;
+  -o-transition: ease-in-out 0.2s;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+/* line 98, ../../src/scss/views/_index.scss */
+.b-section__central--image .c-image__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+/* line 114, ../../src/scss/views/_index.scss */
+.b-section__central--image .c-image__overlay--text {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* line 122, ../../src/scss/views/_index.scss */
+.b-section__central--image:hover .c-image__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 126, ../../src/scss/views/_index.scss */
+.b-section__central--image:hover img {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.12);
+}
+/* line 132, ../../src/scss/views/_index.scss */
 .b-section__central--contact {
   padding-top: 20px;
   text-align: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1);
 }
-/* line 95, ../../src/scss/views/_index.scss */
+/* line 137, ../../src/scss/views/_index.scss */
 .b-section__central--right {
   text-align: left;
   padding: 0 80px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1);
 }
-/* line 98, ../../src/scss/views/_index.scss */
+/* line 141, ../../src/scss/views/_index.scss */
 .b-section__central--right .text--orange {
   font-size: 8em;
 }
-/* line 102, ../../src/scss/views/_index.scss */
+/* line 145, ../../src/scss/views/_index.scss */
 .b-section__central--title {
   padding-bottom: 30px;
 }
-/* line 105, ../../src/scss/views/_index.scss */
+/* line 148, ../../src/scss/views/_index.scss */
 .b-section__central--more {
   float: left;
   width: 100%;
   padding-top: 40px;
 }
-/* line 109, ../../src/scss/views/_index.scss */
+/* line 152, ../../src/scss/views/_index.scss */
 .b-section__central--more .text--red {
   font-size: 1em;
 }
-/* line 115, ../../src/scss/views/_index.scss */
+/* line 158, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav {
   position: absolute;
   right: -30px;
@@ -645,16 +697,16 @@ body {
   -webkit-transform: translateY(-60%) rotate(90deg);
   transform: translateY(-60%) rotate(90deg);
 }
-/* line 120, ../../src/scss/views/_index.scss */
+/* line 163, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item {
   float: left;
 }
-/* line 122, ../../src/scss/views/_index.scss */
+/* line 165, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item:nth-child(1) {
   position: relative;
   right: 60px;
 }
-/* line 126, ../../src/scss/views/_index.scss */
+/* line 169, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span {
   font-size: 12px;
   font-weight: 700;
@@ -664,15 +716,15 @@ body {
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
 }
-/* line 131, ../../src/scss/views/_index.scss */
+/* line 174, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span:hover {
   color: #0000ff;
 }
-/* line 134, ../../src/scss/views/_index.scss */
+/* line 177, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span.is--active {
   color: #0000ff;
 }
-/* line 136, ../../src/scss/views/_index.scss */
+/* line 179, ../../src/scss/views/_index.scss */
 .b-section__works--sidenav .c-sidenav--item span.is--active:after {
   content: "";
   width: 50%;
@@ -681,7 +733,7 @@ body {
   display: block;
   background: #0000ff;
 }
-/* line 150, ../../src/scss/views/_index.scss */
+/* line 193, ../../src/scss/views/_index.scss */
 .b-section__works--group {
   opacity: 0;
   visibility: hidden;
@@ -695,54 +747,54 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 159, ../../src/scss/views/_index.scss */
+/* line 202, ../../src/scss/views/_index.scss */
 .b-section__works--group .b-section__group--wrapper {
   align-items: center;
   display: flex;
   width: 75%;
   margin: 0 auto;
 }
-/* line 165, ../../src/scss/views/_index.scss */
+/* line 208, ../../src/scss/views/_index.scss */
 .b-section__works--group.is--active {
   opacity: 1;
   visibility: visible;
 }
-/* line 169, ../../src/scss/views/_index.scss */
+/* line 212, ../../src/scss/views/_index.scss */
 .b-section__works--group > nav {
   float: left;
   text-align: center;
 }
-/* line 173, ../../src/scss/views/_index.scss */
+/* line 216, ../../src/scss/views/_index.scss */
 .b-section__works--group .b-section__works--images {
   width: 40%;
 }
-/* line 176, ../../src/scss/views/_index.scss */
+/* line 219, ../../src/scss/views/_index.scss */
 .b-section__works--group .b-section__works--info {
   width: 50%;
 }
-/* line 179, ../../src/scss/views/_index.scss */
+/* line 222, ../../src/scss/views/_index.scss */
 .b-section__works--group .works__item {
   text-align: center;
   position: relative;
 }
-/* line 182, ../../src/scss/views/_index.scss */
+/* line 225, ../../src/scss/views/_index.scss */
 .b-section__works--group .works__item--title {
   margin-bottom: 30px;
   text-align: left;
 }
-/* line 185, ../../src/scss/views/_index.scss */
+/* line 228, ../../src/scss/views/_index.scss */
 .b-section__works--group .works__item--title span {
   color: #ff7441;
   text-transform: lowercase;
   font-weight: 700;
   font-size: 2.5em;
 }
-/* line 192, ../../src/scss/views/_index.scss */
+/* line 235, ../../src/scss/views/_index.scss */
 .b-section__works--group .works__item--content {
   text-align: left;
 }
 
-/* line 200, ../../src/scss/views/_index.scss */
+/* line 243, ../../src/scss/views/_index.scss */
 .slick-slider {
   float: left;
   width: 50%;
