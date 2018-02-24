@@ -13,7 +13,10 @@ var carousel = function carousel() {
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
-    variableWidth: false
+    variableWidth: false,
+    prevArrow: '<button class="slick-prev slick-arrow text__lighter--orange text--bordered" aria-label="Previous" type="button" style="">Prev</button>',
+    nextArrow: '<button class="slick-next slick-arrow text__lighter--orange text--bordered" aria-label="Next" type="button" style="">Next</button>'
+
   });
 };
 
