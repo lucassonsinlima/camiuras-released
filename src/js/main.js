@@ -14,11 +14,12 @@ var carousel = (function(){
      variableWidth: false,
      prevArrow:'<button class="slick-prev slick-arrow text__lighter--orange text--bordered" aria-label="Previous" type="button" style="">Prev</button>',
      nextArrow:'<button class="slick-next slick-arrow text__lighter--orange text--bordered" aria-label="Next" type="button" style="">Next</button>'
-     
+
   });
 })
 
 var nav_handler = (function(){
+  var menuNavItem = $('.b-section__nav');
   var nav_item = $('[data-go]');
   var container = $('[data-content]');
 
@@ -38,8 +39,8 @@ var piling = (function(){
     menu: null,
     direction: 'horizontal',
     verticalCentered: true,
-    sectionsColor: ["#fff","#fff","#fff","#fff","#fff"],
-    anchors: ['home', 'home2', 'about', 'tech', 'works'],
+    sectionsColor: ["#f9f9f9","#f9f9f9","#f9f9f9","#f9f9f9","#f9f9f9"],
+    anchors: ['home', 'home2', 'about', 'works'],
     scrollingSpeed: 400,
     easing: 'swing',
     loopBottom: false,
@@ -54,7 +55,13 @@ var piling = (function(){
     animateAnchor: true,
 
     onLeave: function(index, nextIndex, direction){},
-    afterLoad: function(anchorLink, index){},
+    afterLoad: function(anchorLink, index){
+      var hash = "#"+anchorLink;
+      var allNavItems = $('.b-section__nav').find("a");
+      var navItem = $('.b-section__nav').find("a[href='"+hash+"']");
+      allNavItems.removeClass('is--active');
+      navItem.addClass('is--active');
+    },
     afterRender: function(){}
   });
 

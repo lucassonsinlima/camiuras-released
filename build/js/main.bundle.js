@@ -21,6 +21,7 @@ var carousel = function carousel() {
 };
 
 var nav_handler = function nav_handler() {
+  var menuNavItem = $('.b-section__nav');
   var nav_item = $('[data-go]');
   var container = $('[data-content]');
 
@@ -40,8 +41,8 @@ var piling = function piling() {
     menu: null,
     direction: 'horizontal',
     verticalCentered: true,
-    sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff"],
-    anchors: ['home', 'home2', 'about', 'tech', 'works'],
+    sectionsColor: ["#f9f9f9", "#f9f9f9", "#f9f9f9", "#f9f9f9", "#f9f9f9"],
+    anchors: ['home', 'home2', 'about', 'works'],
     scrollingSpeed: 400,
     easing: 'swing',
     loopBottom: false,
@@ -56,7 +57,13 @@ var piling = function piling() {
     animateAnchor: true,
 
     onLeave: function onLeave(index, nextIndex, direction) {},
-    afterLoad: function afterLoad(anchorLink, index) {},
+    afterLoad: function afterLoad(anchorLink, index) {
+      var hash = "#" + anchorLink;
+      var allNavItems = $('.b-section__nav').find("a");
+      var navItem = $('.b-section__nav').find("a[href='" + hash + "']");
+      allNavItems.removeClass('is--active');
+      navItem.addClass('is--active');
+    },
     afterRender: function afterRender() {}
   });
 };

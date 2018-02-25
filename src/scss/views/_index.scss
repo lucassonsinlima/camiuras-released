@@ -7,16 +7,6 @@
 .l-section {
   //First section
   &__welcome {
-    .scroll__me {
-      position: fixed;
-      text-align: center;
-      width: 100%;
-      bottom: 30px;
-      img {
-        width: 70px;
-        height: auto;
-      }
-    }
   }
   &__menu {
     &--container {
@@ -50,6 +40,13 @@
     span {
       font-weight: 600;
       font-size: 13px;
+    }
+    .is--active {
+      .text--bordered {
+        &:after {
+          width: 25px;
+        }
+      }
     }
     &--center {
       left: 50%;
@@ -86,9 +83,6 @@
       .text--red {
         font-size: .9em;
       }
-      .text__lighter--orange {
-        font-size: .7em;
-      }
     }
     &--image {
       position: relative;
@@ -99,14 +93,12 @@
       img {
         @include transition(.2s ease-in-out);
       }
-      &:hover {
-        .c-image__overlay {
-          opacity: 1;
-          visibility: visible;
-        }
-        img {
-          -webkit-backface-visibility: hidden;
-          -webkit-transform: translateZ(0) scale(1.12);
+      .c-central__image--overlay {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        span {
+          font-size: .8em;
         }
       }
     }
@@ -152,8 +144,7 @@
           right: 60px;
         }
         span {
-          font-size: 12px;
-          font-weight: 700;
+          font-family: $fontSwiss;
           cursor: pointer;
           @include transition(.2s ease-in-out);
           &:hover {
@@ -168,6 +159,7 @@
               height: 5px;
               display: block;
               background: $blue;
+              transform: skewX(15deg);
             }
           }
         }

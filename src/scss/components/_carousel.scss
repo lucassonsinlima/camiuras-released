@@ -12,13 +12,17 @@
   -webkit-transform: skewX(-15deg);
   transform: skewX(-15deg);
   cursor: pointer;
+  font-family: $fontSwiss;
+  &:after {
+    transform: skewX(15deg);
+  }
 }
 
 .slick-next {
-  right: 20px;
+  right: 0;
 }
 .slick-prev {
-  left: 20px;
+  left: 0;
 }
 
 .slick-slide {
@@ -28,5 +32,5 @@
   }
 }
 .slick-list {
-  padding: 0 -10px;  
+  padding: 0 -10px;
 }
