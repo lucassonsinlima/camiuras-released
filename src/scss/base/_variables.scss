@@ -1,15 +1,18 @@
 $font-path-univers: "../../../src/fonts/univers" !default;
+$font-path-swiss: "../../../src/fonts/swiss" !default;
+
 // $font-path-univers: "./src/fonts/univers" !default;
 //Fonts
 $fontMain: "Univers", sans-serif;
 $fontLight: "Univers-Light", sans-serif;
 $fontBlackExtObl: "Univers-BlackExtObl", sans-serif;
+$fontSwiss: "Swiss", sans-serif;
 //Colors
 $orange: #ff7441;
 $red: #ff0000;
 $blue: #0000ff;
 $gray: #454545;
-$gray-light: #bebebe;
+$gray-light: #888;
 
 //Text
 $text--navbar : #fff;

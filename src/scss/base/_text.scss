@@ -9,6 +9,25 @@
       font-size: 12em;
     }
   }
+  &--title {
+    font-family: $fontSwiss;
+    font-size: 17em;
+    color: $orange;    
+  }
+  &--title2 {
+    font-family: $fontSwiss;
+    font-size: 8em;
+    color: $orange;
+  }
+  &--subtitle {
+    color: $red;
+    font-family: $fontSwiss;  
+    font-size: 1.3em;  
+    @include transition(.2s ease-in-out);
+    &:hover {
+      color: darken($red, 20%);
+    }
+  }
   &--red {
     font-weight: 700;
     color: $red;
@@ -33,6 +52,7 @@
     line-height: 25px;
     font-weight: 600;
     letter-spacing: 2px;
+    font-size: .8em;
   }
   &__lighter {
     position: relative;

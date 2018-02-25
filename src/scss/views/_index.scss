@@ -20,8 +20,9 @@
   }
   &__menu {
     &--container {
-      .text--red {
-        font-size: 1.2em;
+      .text--title {
+        position: relative;
+        top: -30px;
       }
     }
   }
@@ -122,6 +123,9 @@
       .text--orange {
         font-size: 8em;
       }
+      .text--subtitle {
+        font-size: .9em;
+      }
     }
     &--title {
       padding-bottom: 30px;
@@ -217,19 +221,6 @@
         .image__wrapper {
           position: relative;
           display: inline-block;
-          img {
-          @include transition(.2s ease-in-out);
-          }
-          &:hover {
-            .c-image__overlay {
-              opacity: 1;
-              visibility: visible;
-            }
-            img {
-              -webkit-backface-visibility: hidden;
-              -webkit-transform: translateZ(0) scale(1.12);
-            }
-          }
         }
         &--content {
           text-align: left;
