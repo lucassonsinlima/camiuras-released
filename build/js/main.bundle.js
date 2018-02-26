@@ -68,9 +68,29 @@ var piling = function piling() {
   });
 };
 
+var blotter = function blotter() {
+  var text = new Blotter.Text("uras", {
+    family: "'Swiss', sans-serif",
+    size: 290,
+    fill: "#171717",
+    style: 'normal',
+    weight: 500
+  });
+  var container = $(".l-section__welcome--container.container");
+
+  var material = new Blotter.ChannelSplitMaterial();
+
+  var blotter = new Blotter(material, { texts: text });
+
+  var scope = blotter.forText(text);
+
+  scope.appendTo(container);
+};
+
 $(document).ready(function () {
   carousel();
   nav_handler();
   piling();
+  blotter();
 });
 //# sourceMappingURL=main.bundle.js.map

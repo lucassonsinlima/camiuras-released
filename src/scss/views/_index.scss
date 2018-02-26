@@ -7,6 +7,9 @@
 .l-section {
   //First section
   &__welcome {
+    .b-canvas {
+      transform: skewX(-15deg);
+    }
   }
   &__menu {
     &--container {
