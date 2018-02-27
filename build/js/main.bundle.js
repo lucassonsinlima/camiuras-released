@@ -68,7 +68,7 @@ var piling = function piling() {
   });
 };
 
-var blotter = function blotter() {
+var bl = function bl() {
   var text = new Blotter.Text("uras", {
     family: "'Swiss', sans-serif",
     size: 290,
@@ -76,14 +76,78 @@ var blotter = function blotter() {
     style: 'normal',
     weight: 500
   });
+
   var container = $(".l-section__welcome--container.container");
 
   var material = new Blotter.ChannelSplitMaterial();
-
   var blotter = new Blotter(material, { texts: text });
+  material.needsUpdate = true;
+  blotter.needsUpdate = true;
 
+  function _event() {
+    $(document).mousemove(function (event) {
+      _handleMousemove(event);
+    });
+    // $(document).on("mousemove", function(e){
+    //   var x = e.screenX / 2,
+    //       y = e.screenY / 2 ;
+    //       material.uniforms.uOffset.value = x + 0.1;
+    //       material.uniforms.uRotation.value = y + 0.1;
+    // })
+  }
+
+  function tang(a, b, c, d) {
+    var e = 180 * Math.atan2(d - b, c - a) / Math.PI;
+    return e = 180 + e;
+  }
+
+  function raiz(a, b, c, d) {
+    var e = a - c,
+        f = b - d;
+    return Math.sqrt(e * e + f * f);
+  }
+
+  function _setInitialCenter(el) {
+    console.log("INITIAL CENTER");
+    var a = $(document).width(),
+        b = $(document).height(),
+        c = el.width(),
+        d = el.height();
+    var examplePosition = el.offset();
+    _handleNewCenter((examplePosition.left + c / 2) / a, (examplePosition.top + d / 2) / b);
+  }
+
+  function _handleNewCenter(c, d) {
+    console.log("NEW CENTER");
+    var e = $(document).width(),
+        f = $(document).height();
+
+    var h = container,
+        i = h.offset(),
+        j = (i.left + h.width() / 2) / e,
+        k = (i.top + h.height() / 2) / f,
+        l = tang(j, k, c, d),
+        m = Math.min(.2, raiz(j, k, c, d));
+
+    material.uniforms.uRotation.value = l;
+    material.uniforms.uOffset.value = m;
+  }
+
+  function _handleMousemove(a) {
+    console.log("HANDLE MOVING");
+    var domWidth = $(document).width(),
+        domHeight = $(document).height(),
+        d = a.pageX / b,
+        e = a.pageY / c;
+    _handleNewCenter(d, e);
+  }
+  blotter.on("ready", function (e) {
+    console.log("ready");
+    debugger;
+    _setInitialCenter();
+  });
+  _event();
   var scope = blotter.forText(text);
-
   scope.appendTo(container);
 };
 
@@ -91,6 +155,6 @@ $(document).ready(function () {
   carousel();
   nav_handler();
   piling();
-  blotter();
+  bl();
 });
 //# sourceMappingURL=main.bundle.js.map
