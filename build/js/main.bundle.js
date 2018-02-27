@@ -68,13 +68,15 @@ var piling = function piling() {
   });
 };
 
-var bl = function bl() {
+var blotter = function blotter() {
   var text = new Blotter.Text("uras", {
     family: "'Swiss', sans-serif",
     size: 290,
     fill: "#171717",
     style: 'normal',
-    weight: 500
+    weight: 500,
+    paddingRight: 100,
+    paddingLeft: 100
   });
 
   var container = $(".l-section__welcome--container.container");
@@ -88,12 +90,6 @@ var bl = function bl() {
     $(document).mousemove(function (event) {
       _handleMousemove(event);
     });
-    // $(document).on("mousemove", function(e){
-    //   var x = e.screenX / 2,
-    //       y = e.screenY / 2 ;
-    //       material.uniforms.uOffset.value = x + 0.1;
-    //       material.uniforms.uRotation.value = y + 0.1;
-    // })
   }
 
   function tang(a, b, c, d) {
@@ -108,7 +104,6 @@ var bl = function bl() {
   }
 
   function _setInitialCenter(el) {
-    console.log("INITIAL CENTER");
     var a = $(document).width(),
         b = $(document).height(),
         c = el.width(),
@@ -118,7 +113,6 @@ var bl = function bl() {
   }
 
   function _handleNewCenter(c, d) {
-    console.log("NEW CENTER");
     var e = $(document).width(),
         f = $(document).height();
 
@@ -134,17 +128,17 @@ var bl = function bl() {
   }
 
   function _handleMousemove(a) {
-    console.log("HANDLE MOVING");
     var domWidth = $(document).width(),
         domHeight = $(document).height(),
-        d = a.pageX / b,
-        e = a.pageY / c;
+        d = a.pageX / domWidth,
+        e = a.pageY / domHeight;
     _handleNewCenter(d, e);
   }
   blotter.on("ready", function (e) {
-    console.log("ready");
-    debugger;
-    _setInitialCenter();
+    var textID = this._texts[0].id;
+    var canvasClass = this._scopes[textID].domElement.className;
+    var $el = $('.' + canvasClass + '');
+    _setInitialCenter($el[0]);
   });
   _event();
   var scope = blotter.forText(text);
@@ -155,6 +149,6 @@ $(document).ready(function () {
   carousel();
   nav_handler();
   piling();
-  bl();
+  blotter();
 });
 //# sourceMappingURL=main.bundle.js.map
