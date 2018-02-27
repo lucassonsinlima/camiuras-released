@@ -96,14 +96,6 @@
       img {
         @include transition(.2s ease-in-out);
       }
-      .c-central__image--overlay {
-        position: absolute;
-        bottom: 10px;
-        right: 15px;
-        span {
-          font-size: .8em;
-        }
-      }
     }
     &--contact {
       padding-top: 20px;
@@ -137,7 +129,7 @@
   &__works {
     &--sidenav {
       position: absolute;
-      right: -30px;
+      right: -70px;
       top: 60%;
       @include transform(translateY(-60%) rotate(90deg));
       .c-sidenav--item {
